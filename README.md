@@ -1,276 +1,186 @@
-# Interactive BI Dashboard (Python + Gradio)
+#  Interactive BI Dashboard (Python + Gradio)
 
-# 
+##  Overview
 
-# Overview
-This project is an interactive Business Intelligence (BI) dashboard built with Python and Gradio. It allows users to upload tabular data (CSV/Excel), explore it through summary statistics and filters, generate multiple visualizations, export filtered subsets, and view automated insights such as top-performing groups and potential outliers. The dashboard is designed for non-technical business users and data analysts who want to quickly understand their data and answer key business questions.
+This project is an **interactive Business Intelligence (BI) dashboard** built with **Python** and **Gradio**. It enables users to upload tabular data (CSV or Excel), explore it through summary statistics and interactive filters, generate multiple visualizations, export filtered subsets, and view automated insights such as top-performing groups and potential outliers.
 
-# 
+The dashboard is designed for **non-technical business users** and **data analysts** who want to quickly understand their data and answer key business questions without writing code.
 
-# Features
+---
 
-## \*   Data upload:
+##  Features
 
-# &nbsp;   
-\*   Upload CSV or Excel files.     
-\*   View dataset info (rows, columns, data types) and a preview of the data.     
-\*   Clear error messages for invalid or empty files.
-     
+###  Data Upload
 
-## \*   Data exploration:
+* Upload CSV or Excel files
+* View dataset info (rows, columns, data types)
+* Preview uploaded data
+* Clear error handling for invalid or empty files
 
-# &nbsp;   
-\*   Summary statistics for numeric columns.      
-\*   Missing values report by column.
-\*   Correlation matrix for numeric features.
-\*   Interactive filtering:
-\*   Filter by numeric ranges (min/max).
-\*   Filter by categorical selections.
-\*   View the filtered subset in a table with row counts.      
+###  Data Exploration
 
-## \*   Visualizations:
+* Summary statistics for numeric columns
+* Missing values report by column
+* Correlation matrix for numeric features
 
-# &nbsp;   
-\*   Distribution plots (histogram / boxplot) for numeric columns.
-\*   Category bar chart with aggregation (sum, mean, count, etc.).
-\*   Correlation heatmap of numeric features.
-\*   Time series plot (aggregated metric over time).     
+###  Interactive Filtering
 
-## \*   Export:
+* Numeric range filters (min/max)
+* Categorical filters
+* View filtered subset with row counts
 
-# &nbsp;   
-\*   Download the filtered dataset as a CSV file.
-\*   Automated insights:
-\*   Top N groups by a selected numeric metric.
-\*   Simple outlier detection for numeric columns (high/low values vs. average).      
+###  Visualizations
 
-# 
+* Distribution plots (histogram, boxplot)
+* Category bar charts with aggregation (sum, mean, count, etc.)
+* Correlation heatmap
+* Time series plots (aggregated metrics over time)
 
-## Tech Stack
-\*   Python   
-\*   pandas 
-\*   numpy   
-\*   Plotly
-\*   Gradio
+###  Export
 
-# &nbsp;   
+* Download filtered datasets as CSV files
 
-# 
+###  Automated Insights
 
-# Project Structure
-\*   app.py - Main Gradio app: UI layout, tabs, and event wiring.
-\*   data\\\_processor.py - Data loading, cleaning, summary statistics, missing values, correlation matrix, filtering, export helpers, etc.
-\*   visualizations.py - Functions to create distribution plots, category bar charts, correlation heatmaps, and time series plots.
-\*   insights.py - Automated insight generation (top N groups, outliers).
-\*   utils.py - Small shared (unused) helper functions.  
-\*   requirements.txt - Python dependencies.
-\*   README.md - Project overview and instructions.
-\*   data folder - Sample datasets to test.   
+* Top **N** groups by selected numeric metric
+* Simple outlier detection (high/low values vs. average)
 
-# 
+---
 
-# Setup (for local run)
+##  Tech Stack
 
-# 1\. Clone this repository and move it into the project folder.
+* **Python**
+* **pandas**
+* **numpy**
+* **Plotly**
+* **Gradio**
 
-# 2\. (Recommended) Create and activate a virtual environment.
+---
 
-# 3\. Install dependencies using pip install -r requirements.txt in the terminal.
+##  Project Structure
 
-# 
+```text
+.
+├── app.py               # Main Gradio app (UI, tabs, event wiring)
+├── data_processor.py    # Data loading, cleaning, stats, filtering, export
+├── visualizations.py    # Plot generation functions
+├── insights.py          # Automated insight logic (top N, outliers)
+├── utils.py             # Shared helper utilities (currently minimal)
+├── requirements.txt     # Python dependencies
+├── README.md            # Project documentation
+└── data/                # Sample datasets
+```
 
-# How to Run the Dashboard
+---
 
-# 
+##  Setup (Local Run)
 
-# \#### Option 1 – Hosted (recommended)
+1. Clone this repository:
 
-# 
+   ```bash
+   git clone <repository-url>
+   cd <project-folder>
+   ```
 
-# 1\. Simply open the deployed Gradio app in your browser using the link https://huggingface.co/spaces/aryanb2305/BI\_Dashboard.
+2. *(Recommended)* Create and activate a virtual environment
 
-# 
+3. Install dependencies:
 
-# \#### Option 2 – Run locally
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-# 
+---
 
-# 1\. After installing dependencies, run python app.py in the terminal.
+##  How to Run the Dashboard
 
-# 2\. Open the URL shown in the terminal.
+### Option 1 – Hosted (Recommended)
 
-# &nbsp;   
+Open the deployed Gradio app directly in your browser:
+ [https://huggingface.co/spaces/aryanb2305/BI_Dashboard](https://huggingface.co/spaces/aryanb2305/BI_Dashboard)
 
-# 
+### Option 2 – Run Locally
 
-# How to Use the Dashboard
+```bash
+python app.py
+```
 
-# 
+Open the URL shown in the terminal.
 
-# 1\.  Upload Data
+---
 
-# &nbsp;   
+##  How to Use the Dashboard
 
-# &nbsp;   \*   Go to the “Upload Data” tab.
+###  Upload Data
 
-# &nbsp;       
+* Navigate to the **Upload Data** tab
+* Upload a CSV or Excel file
+* Verify dataset info and preview
 
-# &nbsp;   \*   Upload a CSV or Excel file.
+###  Explore Statistics
 
-# &nbsp;       
+* Open the **Statistics** tab
+* Review summary statistics, missing values, and correlations
 
-# &nbsp;   \*   Check dataset info and the preview to confirm the data loaded correctly.
+###  Filter & Explore
 
-# &nbsp;       
+* Use the **Filter & Explore** tab to:
 
-# 2\.  Explore Statistics
+  * Load available columns
+  * Apply numeric and categorical filters
+  * Inspect filtered results
+  * Download filtered data as CSV
 
-# &nbsp;   
+###  Visualizations
 
-# &nbsp;   \*   Open the “Statistics” tab.
+* Go to the **Visualizations** tab
+* Select a visualization type
+* Choose relevant columns
+* Generate and interpret plots
 
-# &nbsp;       
+###  Insights
 
-# &nbsp;   \*   View summary statistics, missing values, and the correlation matrix to understand data quality and relationships.
+* Open the **Insights** tab
+* Refresh available columns
+* Select grouping and numeric metrics
+* Choose **Top N**
+* Generate insights and outlier summaries
 
-# &nbsp;       
+---
 
-# 3\.  Filter \& Explore
+##  Example Business Questions
 
-# &nbsp;   
+This dashboard can help answer:
 
-# &nbsp;   \*   Use the “Filter \& Explore” tab to:
+* Which products, categories, or regions generate the highest revenue?
+* How are key metrics distributed (prices, ratings, order values)?
+* Are there strong correlations between numeric variables?
+* How do metrics evolve over time?
+* Are there unusually high or low values indicating anomalies?
 
-# &nbsp;       
+---
 
-# &nbsp;       \*   Load available columns.
+##  Limitations
 
-# &nbsp;           
+* Data types rely on basic pandas inference
+* Time series assumes a parseable date column
+* Outlier detection uses a simple z-score approach
 
-# &nbsp;       \*   Apply numeric and categorical filters.
+---
 
-# &nbsp;           
+##  Future Improvements
 
-# &nbsp;       \*   Inspect the filtered subset and row count.
+* Advanced statistical tests and segmentation
+* Additional visualizations (scatter plots, maps)
+* User-defined insight rules or thresholds
+* Authentication and saved dashboards per user
 
-# &nbsp;           
+---
 
-# &nbsp;       \*   Download the filtered subset as a CSV file.
+##  Acknowledgements
 
-# &nbsp;           
+If you find this project useful, feel free to  the repository and share feedback!
 
-# 4\.  Visualizations
+---
 
-# &nbsp;   
-
-# &nbsp;   \*   In the “Visualizations” tab:
-
-# &nbsp;       
-
-# &nbsp;       \*   Choose a visualization type (Distribution, Category Bar, Correlation Heatmap, Time Series).
-
-# &nbsp;           
-
-# &nbsp;       \*   Select appropriate columns (numeric/date/category).
-
-# &nbsp;           
-
-# &nbsp;       \*   Generate the plot and interpret the results.
-
-# &nbsp;           
-
-# 5\.  Insights
-
-# &nbsp;   
-
-# &nbsp;   \*   In the “Insights” tab:
-
-# &nbsp;       
-
-# &nbsp;       \*   Refresh columns.
-
-# &nbsp;           
-
-# &nbsp;       \*   Select a grouping column (category) and a numeric value column.
-
-# &nbsp;           
-
-# &nbsp;       \*   Choose Top N.
-
-# &nbsp;           
-
-# &nbsp;       \*   Generate insights to see top groups and potential outliers.
-
-# &nbsp;           
-
-# 
-
-# Business Questions (Examples)
-
-# 
-
-# This dashboard can help answer questions such as:
-
-# 
-
-# \*   Which categories, products, or regions generate the highest sales or revenue?
-
-# &nbsp;   
-
-# \*   How are key metrics distributed (e.g., order values, prices, ratings)?
-
-# &nbsp;   
-
-# \*   Are there strong correlations between numeric variables?
-
-# &nbsp;   
-
-# \*   How do key metrics change over time?
-
-# &nbsp;   
-
-# \*   Are there any unusually high or low values that may indicate anomalies?
-
-# &nbsp;   
-
-# 
-
-# Limitations and Future Improvements
-
-# 
-
-# \*   Data types rely on basic pandas inference; further cleaning may be needed for very messy datasets.
-
-# &nbsp;   
-
-# \*   Time series assumes a parseable date column.
-
-# &nbsp;   
-
-# \*   Outlier detection uses a simple z-score approach and may need adjustment for heavily skewed data.
-
-# &nbsp;   
-
-# 
-
-# Possible future enhancements:
-
-# 
-
-# \*   More advanced statistical tests or segmentation.
-
-# &nbsp;   
-
-# \*   Additional visualization types (e.g., scatter plots, maps).
-
-# &nbsp;   
-
-# \*   User-defined insight rules or thresholds.
-
-# &nbsp;   
-
-# \*   Authentication / saving dashboards per user.
-
-
-
-
+Happy exploring your data!
