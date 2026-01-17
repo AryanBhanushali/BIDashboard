@@ -9,163 +9,67 @@ This project is an interactive Business Intelligence (BI) dashboard built with P
 
 # Features
 
-# \*   Data upload:
+## \*   Data upload:
 
 # &nbsp;   
+\*   Upload CSV or Excel files.     
+\*   View dataset info (rows, columns, data types) and a preview of the data.     
+\*   Clear error messages for invalid or empty files.
+     
 
-# &nbsp;   \*   Upload CSV or Excel files.
-
-# &nbsp;       
-
-# &nbsp;   \*   View dataset info (rows, columns, data types) and a preview of the data.
-
-# &nbsp;       
-
-# &nbsp;   \*   Clear error messages for invalid or empty files.
-
-# &nbsp;       
-
-# \*   Data exploration:
+## \*   Data exploration:
 
 # &nbsp;   
+\*   Summary statistics for numeric columns.      
+\*   Missing values report by column.
+\*   Correlation matrix for numeric features.
+\*   Interactive filtering:
+\*   Filter by numeric ranges (min/max).
+\*   Filter by categorical selections.
+\*   View the filtered subset in a table with row counts.      
 
-# &nbsp;   \*   Summary statistics for numeric columns.
-
-# &nbsp;       
-
-# &nbsp;   \*   Missing values report by column.
-
-# &nbsp;       
-
-# &nbsp;   \*   Correlation matrix for numeric features.
-
-# &nbsp;       
-
-# \*   Interactive filtering:
+## \*   Visualizations:
 
 # &nbsp;   
+\*   Distribution plots (histogram / boxplot) for numeric columns.
+\*   Category bar chart with aggregation (sum, mean, count, etc.).
+\*   Correlation heatmap of numeric features.
+\*   Time series plot (aggregated metric over time).     
 
-# &nbsp;   \*   Filter by numeric ranges (min/max).
-
-# &nbsp;       
-
-# &nbsp;   \*   Filter by categorical selections.
-
-# &nbsp;       
-
-# &nbsp;   \*   View the filtered subset in a table with row counts.
-
-# &nbsp;       
-
-# \*   Visualizations:
+## \*   Export:
 
 # &nbsp;   
-
-# &nbsp;   \*   Distribution plots (histogram / boxplot) for numeric columns.
-
-# &nbsp;       
-
-# &nbsp;   \*   Category bar chart with aggregation (sum, mean, count, etc.).
-
-# &nbsp;       
-
-# &nbsp;   \*   Correlation heatmap of numeric features.
-
-# &nbsp;       
-
-# &nbsp;   \*   Time series plot (aggregated metric over time).
-
-# &nbsp;       
-
-# \*   Export:
-
-# &nbsp;   
-
-# &nbsp;   \*   Download the filtered dataset as a CSV file.
-
-# &nbsp;       
-
-# \*   Automated insights:
-
-# &nbsp;   
-
-# &nbsp;   \*   Top N groups by a selected numeric metric.
-
-# &nbsp;       
-
-# &nbsp;   \*   Simple outlier detection for numeric columns (high/low values vs. average).
-
-# &nbsp;       
+\*   Download the filtered dataset as a CSV file.
+\*   Automated insights:
+\*   Top N groups by a selected numeric metric.
+\*   Simple outlier detection for numeric columns (high/low values vs. average).      
 
 # 
 
-# Tech Stack
-
-# \*   Python
-
-# &nbsp;   
-
-# \*   pandas
-
-# &nbsp;   
-
-# \*   numpy
-
-# &nbsp;   
-
-# \*   Plotly
-
-# &nbsp;   
-
-# \*   Gradio
+## Tech Stack
+\*   Python   
+\*   pandas 
+\*   numpy   
+\*   Plotly
+\*   Gradio
 
 # &nbsp;   
 
 # 
 
 # Project Structure
-
-# 
-
-# \*   app.py - Main Gradio app: UI layout, tabs, and event wiring.
-
-# &nbsp;   
-
-# \*   data\\\_processor.py - Data loading, cleaning, summary statistics, missing values, correlation matrix, filtering, export helpers, etc.
-
-# &nbsp;   
-
-# \*   visualizations.py - Functions to create distribution plots, category bar charts, correlation heatmaps, and time series plots.
-
-# 
-
-# \*   insights.py - Automated insight generation (top N groups, outliers).
-
-# 
-
-# \*   utils.py - Small shared (unused) helper functions.
-
-# &nbsp;   
-
-# \*   requirements.txt - Python dependencies.
-
-# &nbsp;   
-
-# \*   README.md - Project overview and instructions.
-
-# 
-
-# \*   data folder - Sample datasets to test.
-
-# &nbsp;   
+\*   app.py - Main Gradio app: UI layout, tabs, and event wiring.
+\*   data\\\_processor.py - Data loading, cleaning, summary statistics, missing values, correlation matrix, filtering, export helpers, etc.
+\*   visualizations.py - Functions to create distribution plots, category bar charts, correlation heatmaps, and time series plots.
+\*   insights.py - Automated insight generation (top N groups, outliers).
+\*   utils.py - Small shared (unused) helper functions.  
+\*   requirements.txt - Python dependencies.
+\*   README.md - Project overview and instructions.
+\*   data folder - Sample datasets to test.   
 
 # 
 
 # Setup (for local run)
-
-# ------------------------
-
-# 
 
 # 1\. Clone this repository and move it into the project folder.
 
@@ -175,11 +79,7 @@ This project is an interactive Business Intelligence (BI) dashboard built with P
 
 # 
 
-# 
-
 # How to Run the Dashboard
-
-# ------------------------
 
 # 
 
@@ -370,6 +270,7 @@ This project is an interactive Business Intelligence (BI) dashboard built with P
 # &nbsp;   
 
 # \*   Authentication / saving dashboards per user.
+
 
 
 
