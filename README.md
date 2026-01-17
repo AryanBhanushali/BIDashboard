@@ -1,28 +1,13 @@
 # Interactive BI Dashboard (Python + Gradio)
 
-# ==========================================
-
 # 
 
 # Overview
-
-# --------
-
-# 
-
-# This project is an interactive Business Intelligence (BI) dashboard built with Python and Gradio. It allows users to upload tabular data (CSV/Excel), explore it through summary statistics and filters, generate multiple visualizations, export filtered subsets, and view automated insights such as top-performing groups and potential outliers.
-
-# 
-
-# The dashboard is designed for non-technical business users and data analysts who want to quickly understand their data and answer key business questions.
+This project is an interactive Business Intelligence (BI) dashboard built with Python and Gradio. It allows users to upload tabular data (CSV/Excel), explore it through summary statistics and filters, generate multiple visualizations, export filtered subsets, and view automated insights such as top-performing groups and potential outliers. The dashboard is designed for non-technical business users and data analysts who want to quickly understand their data and answer key business questions.
 
 # 
 
 # Features
-
-# --------
-
-# 
 
 # \*   Data upload:
 
@@ -116,10 +101,6 @@
 
 # Tech Stack
 
-# ----------
-
-# 
-
 # \*   Python
 
 # &nbsp;   
@@ -143,8 +124,6 @@
 # 
 
 # Project Structure
-
-# -----------------
 
 # 
 
@@ -225,8 +204,6 @@
 # 
 
 # How to Use the Dashboard
-
-# ------------------------
 
 # 
 
@@ -330,8 +307,6 @@
 
 # Business Questions (Examples)
 
-# -----------------------------
-
 # 
 
 # This dashboard can help answer questions such as:
@@ -361,8 +336,6 @@
 # 
 
 # Limitations and Future Improvements
-
-# -----------------------------------
 
 # 
 
@@ -397,5 +370,6 @@
 # &nbsp;   
 
 # \*   Authentication / saving dashboards per user.
+
 
 
