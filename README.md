@@ -1,23 +1,3 @@
-# ---
-
-# title: BI Dashboard
-
-# emoji: 📊
-
-# colorFrom: blue
-
-# colorTo: green
-
-# sdk: gradio
-
-# app\_file: app.py
-
-# pinned: false
-
-# ---
-
-# 
-
 # Interactive BI Dashboard (Python + Gradio)
 
 # ==========================================
@@ -417,4 +397,5 @@
 # &nbsp;   
 
 # \*   Authentication / saving dashboards per user.
+
 
